@@ -29,7 +29,6 @@ dataset
     │   ├── rel2id.json
     ├── test_revised.json
     ├── train_distant.json
-    ├── train_distant_xs.json
     ├── train_revised.json
     └── wikidata-properties.csv
 ```
