@@ -6,8 +6,7 @@ import sys
 
 METRIC_LABELS = ['prec_micro', 'rec_micro', 'f1_micro', 'prec_macro', 'rec_macro', 'f1_macro']
 
-rel2id = json.load(open('/scratch/user/uqptran9/Code/Work_3/dev/dataset/re_docred/meta/rel2id.json', 'r'))
-# rel2id = json.load(open('./dataset/re_docred/meta/rel2id.json', 'r'))
+rel2id = json.load(open('./dataset/meta/rel2id.json', 'r'))
 id2rel = {value: key for key, value in rel2id.items()}
 
 def findSmallestDifference(A, B, m, n):

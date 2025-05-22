@@ -5,8 +5,8 @@ import numpy as np
 import copy
 
 # Modify this path for DocRED dataset
-docred_rel2id = json.load(open('./dataset/re_docred/meta/rel2id.json', 'r'))
-docred_ner2id = json.load(open('./dataset/re_docred/meta/ner2id.json', 'r'))
+docred_rel2id = json.load(open('./dataset/meta/rel2id.json', 'r'))
+docred_ner2id = json.load(open('./dataset/meta/ner2id.json', 'r'))
 
 cdr_rel2id = {'1:NR:2': 0, '1:CID:2': 1}
 gda_rel2id = {'1:NR:2': 0, '1:GDA:2': 1}
