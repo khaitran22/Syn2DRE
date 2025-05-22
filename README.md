@@ -10,6 +10,41 @@ Implementation of **Synergistic Dual Teacher-Student Framework for Document-leve
 ```
 ## Dataset
 We perform experiments on [DocRED](https://github.com/thunlp/DocRED) and [Re-DocRED](https://github.com/tonytan48/Re-DocRED).
+```
+dataset
+├── docred
+│   ├── dev.json
+│   ├── meta
+│   │   ├── README.md
+│   │   ├── char2id.json
+│   │   ├── ner2id.json
+│   │   ├── rel2id.json
+│   │   └── word2id.json
+│   ├── ref
+│   │   ├── train_annotated.fact
+│   │   └── train_distant.fact
+│   ├── test.json
+│   ├── test_revised.json
+│   ├── train_annotated.json
+│   ├── train_distant.json
+│   └── wikidata-properties.csv
+└── re_docred
+    ├── dev_revised.json
+    ├── meta
+    │   ├── README.md
+    │   ├── char2id.json
+    │   ├── ner2id.json
+    │   ├── rel2id.json
+    │   └── word2id.json
+    ├── ref
+    │   ├── train_distant.fact
+    │   └── train_revised.fact
+    ├── test_revised.json
+    ├── train_distant.json
+    ├── train_distant_xs.json
+    ├── train_revised.json
+    └── wikidata-properties.csv
+```
 
 ## Training & Evaluation
 
