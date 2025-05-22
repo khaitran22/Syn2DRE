@@ -1,0 +1,32 @@
+python3 main.py \
+ --data_dir ./dataset/docred/ \
+ --transformer_type bert \
+ --model_name_or_path bert-base-cased \
+ --train_file train_annotated.json \
+ --dev_file dev.json \
+ --test_file test_revised.json \
+ --train_distant_file train_distant.json \
+ --num_labels 5 \
+ --main2_lr 3e-5 \
+ --main2_classifier_lr 1e-4 \
+ --main1_lr 5e-5 \
+ --main1_classifier_lr 1e-4 \
+ --gamma_pos 0.5 \
+ --gamma_neg 0.5 \
+ --train_batch_size 8 \
+ --distant_batch_size 16 \
+ --test_batch_size 8 \
+ --num_train_epochs 7.0 \
+ --save_path_main_1 ./checkpoints/student1.pt \
+ --save_path_main_2 ./checkpoints/student2.pt \
+ --save_path_teacher_1 ./checkpoints/teacher1.pt \
+ --save_path_teacher_2 ./checkpoints/teacher2.pt \
+ --load_path_main_1 ./checkpoints/ptr_ugdre.pt \
+ --load_path_main_2 ./checkpoints/ptr_kddocre.pt \
+ --warmup_epochs 5 \
+ --drop_prob 0.1 \
+ --dropout 0.25 \
+ --agree_weight 0.1 \
+ --cross_update_step 6 \
+ --cross_update \
+ --self_training
