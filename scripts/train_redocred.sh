@@ -1,5 +1,5 @@
 python3 main.py \
- --data_dir ./dataset/re_docred/ \
+ --data_dir ./dataset/ \
  --transformer_type bert \
  --model_name_or_path bert-base-cased \
  --train_file train_revised.json \

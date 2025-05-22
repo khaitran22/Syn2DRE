@@ -1,10 +1,10 @@
 python3 main.py \
- --data_dir ./dataset/docred/ \
+ --data_dir ./dataset/ \
  --transformer_type bert \
  --model_name_or_path bert-base-cased \
  --train_file train_annotated.json \
  --dev_file dev.json \
- --test_file test_revised.json \
+ --test_file dev.json \
  --train_distant_file train_distant.json \
  --num_labels 5 \
  --main2_lr 3e-5 \
