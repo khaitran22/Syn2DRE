@@ -17,14 +17,15 @@ We perform experiments on [DocRED](https://github.com/thunlp/DocRED) and [Re-Doc
 Pre-training Phase can be reproduced by following steps:
 - Fork the Github repository of [KD-DocRE](https://github.com/tonytan48/KD-DocRE/tree/main) and [UGDRE](https://github.com/QiSun123/UGDRE).
 - Copy `pretrain_kddocre.sh` and `pretrain_ugdre.sh` under `/scripts` folder to corresponding Github repos.
+- Follow their instructions in specifying `PATH` for dataset setup.
 
 #### KD-DocRE
 ```
-  bash pretrain_kddocre.sh
+>> bash pretrain_kddocre.sh
 ```
 #### UGDRE
 ```
-  bash pretrain_ugdre.sh
+>> bash pretrain_ugdre.sh
 ```
 
 ### Fine-tuning Phase
@@ -33,10 +34,10 @@ To reproduce the Fine-tuning Phase:
 
 #### Training on DocRED dataset
 ```
-  bash scripts/train_docred.sh
+>> bash scripts/train_docred.sh
 ```
 
 #### Training on Re-DocRED dataset
 ```
-  bash scripts/train_redocred.sh
+>> bash scripts/train_redocred.sh
 ```

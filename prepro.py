@@ -4,10 +4,9 @@ import torch
 import numpy as np
 import copy
 
-docred_rel2id = json.load(open('/scratch/user/uqptran9/Code/Work_3/dev/dataset/re_docred/meta/rel2id.json', 'r'))
-docred_ner2id = json.load(open('/scratch/user/uqptran9/Code/Work_3/dev/dataset/re_docred/meta/ner2id.json', 'r'))
-# docred_rel2id = json.load(open('./dataset/re_docred/meta/rel2id.json', 'r'))
-# docred_ner2id = json.load(open('./dataset/re_docred/meta/ner2id.json', 'r'))
+# Modify this path for DocRED dataset
+docred_rel2id = json.load(open('./dataset/re_docred/meta/rel2id.json', 'r'))
+docred_ner2id = json.load(open('./dataset/re_docred/meta/ner2id.json', 'r'))
 
 cdr_rel2id = {'1:NR:2': 0, '1:CID:2': 1}
 gda_rel2id = {'1:NR:2': 0, '1:GDA:2': 1}
