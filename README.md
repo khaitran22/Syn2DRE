@@ -10,7 +10,7 @@ Implementation of **Synergistic Dual Teacher-Student Framework for Document-leve
 ```
 ## Dataset
 We perform experiments on [DocRED](https://github.com/thunlp/DocRED) and [Re-DocRED](https://github.com/tonytan48/Re-DocRED).
-```
+```markdown
 root
 └── dataset
     ├── dev.json
@@ -34,11 +34,11 @@ Pre-training Phase can be reproduced by following steps:
 - Follow their instructions in specifying `PATH` for dataset setup.
 
 #### KD-DocRE
-```
+```sh
 >> bash pretrain_kddocre.sh
 ```
 #### UGDRE
-```
+```sh
 >> bash pretrain_ugdre.sh
 ```
 
@@ -47,11 +47,11 @@ To reproduce the Fine-tuning Phase:
 - Move pre-trained KD-DocRE and UGDRE models to the `/checkpoints` folder
 
 #### Training on DocRED dataset
-```
+```sh
 >> bash scripts/train_docred.sh
 ```
 
 #### Training on Re-DocRED dataset
-```
+```sh
 >> bash scripts/train_redocred.sh
 ```
