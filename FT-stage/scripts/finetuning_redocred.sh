@@ -1,5 +1,5 @@
 python3 main.py \
- --data_dir ./dataset/ \
+ --data_dir /Syn2DRE/dataset/re_docred/ \
  --transformer_type bert \
  --model_name_or_path bert-base-cased \
  --train_file train_revised.json \
@@ -21,8 +21,8 @@ python3 main.py \
  --save_path_main_2 ./checkpoints/student2.pt \
  --save_path_teacher_1 ./checkpoints/teacher1.pt \
  --save_path_teacher_2 ./checkpoints/teacher2.pt \
- --load_path_main_1 ./checkpoints/ptr_ugdre.pt \
- --load_path_main_2 ./checkpoints/ptr_kddocre.pt \
+ --load_path_main_1 /Syn2DRE/UGDRE/checkpoints/ptr_ugdre.pt \
+ --load_path_main_2 /Syn2DRE/KD-DocRE/checkpoints/ptr_kddocre.pt \
  --warmup_epochs 15 \
  --drop_prob 0.1 \
  --dropout 0.25 \

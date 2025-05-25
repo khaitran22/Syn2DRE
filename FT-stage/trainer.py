@@ -7,7 +7,6 @@ import torch.nn.functional as F
 import torch
 from transformers.optimization import get_linear_schedule_with_warmup
 from evaluation import *
-from ramps import *
 
 """
     Work for both multi or mono GPU

@@ -2,56 +2,54 @@
 
 Implementation of **Synergistic Dual Teacher-Student Framework for Document-level Relation Extraction**
 
-## Installation
-```
-  conda create --name syn2dre python=3.11
-  conda activate syn2dre
-  pip install -r requirements.txt
+## Environment Setup
+```sh
+>> conda create --name syn2dre python=3.11
+>> conda activate syn2dre
+>> pip install -r requirements.txt
 ```
 ## Dataset
 We perform experiments on [DocRED](https://github.com/thunlp/DocRED) and [Re-DocRED](https://github.com/tonytan48/Re-DocRED).
-```markdown
-root
-└── dataset
-    ├── dev.json
-    ├── dev_revised.json
-    ├── meta
-    │   ├── ner2id.json
-    │   └── rel2id.json
-    ├── test.json
-    ├── test_revised.json
-    ├── train_annotated.json
-    ├── train_distant.json
-    └── train_revised.json
+
+Please note that the `test.json` in `docred` folder does not contain ground-truth labels.
+
+## Folder Structure
+Due to large size, we do not include the dataset in this `.zip` file. You can download the `dataset` folder from this [link](https://drive.google.com/file/d/1OdPWZpP_0PkBluohPkjKC8W17LPcOHh1/view?usp=sharing). After downloading, upzip and place `dataset` under the `Syn2DRE` folder as structure below:
+```
+Syn2DRE
+├── dataset
+│   ├── ...
+├── FT-stage
+│   ├── ...
+├── KD-DocRE
+│   ├── ...
+└── UGDRE
+    ├── ...
 ```
 
 ## Training & Evaluation
-
 ### Pre-training Phase
-Pre-training Phase can be reproduced by following steps:
-- Fork the Github repository of [KD-DocRE](https://github.com/tonytan48/KD-DocRE/tree/main) and [UGDRE](https://github.com/QiSun123/UGDRE).
-- Copy `pretrain_kddocre.sh` and `pretrain_ugdre.sh` under `/scripts` folder to corresponding Github repos.
-- Follow their instructions in specifying `PATH` for dataset setup.
-
-#### KD-DocRE
+#### Pre-training KD-DocRE
+To pre-train KD-DocRE, run:
 ```sh
->> bash pretrain_kddocre.sh
+>> bash Syn2DRE/KD-DocRE/scripts/pretrain_kddocre.sh
 ```
-#### UGDRE
+
+#### Pre-training UGDRE
+To pre-train UGDRE, run:
 ```sh
->> bash pretrain_ugdre.sh
+>> bash Syn2DRE/UGDRE/scripts/pretrain_ugdre.sh
 ```
 
 ### Fine-tuning Phase
-To reproduce the Fine-tuning Phase:
-- Move pre-trained KD-DocRE and UGDRE models to the `/checkpoints` folder
+To reproduce the Fine-tuning Phase, run:
 
-#### Training on DocRED dataset
+#### DocRED dataset
 ```sh
->> bash scripts/train_docred.sh
+>> bash Syn2DRE/FT-stage/scripts/train_docred.sh
 ```
 
-#### Training on Re-DocRED dataset
+#### Re-DocRED dataset
 ```sh
->> bash scripts/train_redocred.sh
+>> bash Syn2DRE/FT-stage/scripts/train_redocred.sh
 ```
