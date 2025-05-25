@@ -14,7 +14,7 @@ We perform experiments on [DocRED](https://github.com/thunlp/DocRED) and [Re-Doc
 Please note that the `test.json` in `docred` folder does not contain ground-truth labels.
 
 ## Folder Structure
-Due to large size, we do not include the dataset in this `.zip` file. You can download the `dataset` folder from this [link](https://drive.google.com/file/d/1OdPWZpP_0PkBluohPkjKC8W17LPcOHh1/view?usp=sharing). After downloading, upzip and place `dataset` under the `Syn2DRE` folder as structure below:
+Due to large size, we do not include the dataset here. You can download the `dataset` folder from this [link](https://drive.google.com/file/d/1OdPWZpP_0PkBluohPkjKC8W17LPcOHh1/view?usp=sharing). After downloading, upzip and place `dataset` under the `Syn2DRE` folder as structure below:
 ```
 Syn2DRE
 ├── dataset
