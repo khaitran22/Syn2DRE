@@ -1,0 +1,23 @@
+python3 train.py \
+ --data_dir Syn2DRE/dataset/re_docred/ \
+ --transformer_type bert \
+ --model_name_or_path bert-base-cased \
+ --train_file train_distant.json \
+ --dev_file dev_revised.json \
+ --test_file test_revised.json \
+ --train_batch_size 8 \
+ --test_batch_size 8 \
+ --gradient_accumulation_steps 1 \
+ --num_labels 4 \
+ --learning_rate 3e-5 \
+ --classifier_lr 1e-4 \
+ --max_grad_norm 1.0 \
+ --warmup_ratio 0.06 \
+ --num_train_epochs 10.0 \
+ --seed 66 \
+ --num_class 97 \
+ --gamma_pos 0.5 \
+ --gamma_neg 0.5 \
+ --save_path Syn2DRE/KD-DocRE/checkpoints/ptr_kddocre.pt \
+ --output_name Syn2DRE/KD-DocRE/checkpoints/result_ptr_kddocre.json \
+ --evaluation_steps 5000
